@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { FlatList, SafeAreaView } from 'react-native';
 import { speak } from 'expo-speech';
 
-import LOCATIONS from './../../data/locations.json';
+import { LocationsContext } from '../../context/Locations';
 import { Item } from './../../components/Item/index';
 import styles from './styles';
 
 const ListPage = () => {
   const [selectedId, setSelectedId] = useState(null);
+  const { locations } = useContext(LocationsContext);
 
   function handlePress(item) {
     setSelectedId(item.id);
@@ -27,7 +28,7 @@ const ListPage = () => {
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
-        data={LOCATIONS}
+        data={locations}
         renderItem={renderItem}
         keyExtractor={item => item.id}
         extraData={selectedId}

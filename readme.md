@@ -25,6 +25,9 @@
 <img src="https://user-images.githubusercontent.com/66435387/180370476-d96bf16b-5b3a-46ba-af8b-64c1ee9d2cbb.png" height="300px">
 
 
+## Adicionar Localização
+- Bônus em desenvolvimento...
+
 ## Descrição do desafio:
 - Desenvolver um App utilizando React Native com Expo que possua menu Navigation Drawer com as seguintes opções:
 - 1 - Lista

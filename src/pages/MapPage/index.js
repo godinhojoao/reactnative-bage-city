@@ -1,13 +1,14 @@
-import * as React from 'react';
+import React, { useContext } from 'react';
 import MapView, { Marker } from 'react-native-maps';
 import { View, Image } from 'react-native';
 
-import LOCATIONS from './../../data/locations.json';
+import { LocationsContext } from '../../context/Locations';
+
 import styles from './styles';
 
-
 const MapPage = () => {
-  const markers = LOCATIONS.map(location => ({
+  const { locations } = useContext(LocationsContext);
+  const markers = locations.map(location => ({
     id: location.id,
     latitude: location.coordinates.lat,
     longitude: location.coordinates.lon,
